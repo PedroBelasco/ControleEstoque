@@ -31,6 +31,7 @@ public class ProdutoController : ControllerBase
                 CategoriaNome = prod.Categoria != null ? prod.Categoria.Nome : "",
                 ProdutoNome = prod.Nome,
                 QuantidadeAtual = prod.QuantidadeAtual,
+                Habilitado = prod.Habilitado,
                 UnidadeMedida = prod.UnidadeMedida != null ? prod.UnidadeMedida.Sigla : "",
                 NomeArquivoFoto =  prod.NomeArquivoFoto ?? "no-image.png"
             }).ToListAsync();

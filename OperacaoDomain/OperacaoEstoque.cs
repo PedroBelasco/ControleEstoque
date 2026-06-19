@@ -30,7 +30,7 @@ public class OperacaoEstoque
 
     public void CriarDetalhe(Produto produto, decimal quantidade)
     {
-        if (EntradaSaida.ToUpper() == "S" && quantidade < produto.QuantidadeAtual)
+        if (EntradaSaida.ToUpper() == "S" && quantidade > produto.QuantidadeAtual)
         {
             throw new ArgumentException(
                 "Não é possível fazer uma saída com quantidade maior do que há no estoque"

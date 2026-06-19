@@ -1,4 +1,6 @@
-﻿namespace ApiControleEstoque.Contracts;
+﻿using Microsoft.VisualStudio.Web.CodeGeneration.Utils;
+
+namespace ApiControleEstoque.Contracts;
 
 public record GetPesquisaProdutoRequest
 {
@@ -6,6 +8,7 @@ public record GetPesquisaProdutoRequest
     public required string CategoriaNome { get; set; }
     public required string ProdutoNome { get; set; }
     public required decimal QuantidadeAtual { get; set; }
+    public required bool Habilitado { get; set; }
     public required string UnidadeMedida { get; set; }
     public string? NomeArquivoFoto { get; set; }
 }
